@@ -1,0 +1,10 @@
+{
+  "name": "skene",
+  "description": "PLG (Product-Led Growth) analysis skills for analyzing codebases, identifying growth opportunities, and generating growth strategies",
+  "version": "1.0.0",
+  "author": {
+    "name": "Skene Technologies"
+  },
+  "repository": "https://github.com/SkeneTechnologies/skene-skills",
+  "license": "MIT"
+}
