@@ -1,67 +1,40 @@
 # Skene Skills
 
-Agent skills for PLG (Product-Led Growth) analysis. These skills help AI agents analyze codebases to identify growth opportunities, document features, and generate actionable growth strategies.
+A Claude Code plugin for PLG (Product-Led Growth) analysis. Analyze codebases to identify growth opportunities, document features, and generate actionable growth strategies.
+
+## Installation
+
+In Claude Code, run:
+
+```
+/plugin install github:SkeneTechnologies/skene-skills
+```
+
+See [Claude Code plugins documentation](https://code.claude.com/docs/en/discover-plugins) for more details.
 
 ## Available Skills
 
 | Skill | Description |
 |-------|-------------|
-| `analyze-tech-stack` | Detect technology stack (framework, language, database, services) |
-| `analyze-product-overview` | Extract product info from README and docs |
-| `analyze-growth-hubs` | Identify viral, engagement, and monetization features |
-| `analyze-features` | Document user-facing features |
-| `generate-growth-manifest` | Combine analyses and identify GTM gaps |
-| `generate-growth-template` | Generate PLG growth strategies |
+| `/skene:analyze-tech-stack` | Detect technology stack (framework, language, database, services) |
+| `/skene:analyze-product-overview` | Extract product info from README and docs |
+| `/skene:analyze-growth-hubs` | Identify viral, engagement, and monetization features |
+| `/skene:analyze-features` | Document user-facing features |
+| `/skene:generate-growth-manifest` | Combine analyses and identify GTM gaps |
+| `/skene:generate-growth-template` | Generate PLG growth strategies |
 
-## Installation
+## Usage
 
-### Claude Code
-
-Add to your Claude Code settings (`~/.claude/settings.json`):
-
-```json
-{
-  "agentSkills": [
-    {
-      "source": "github:SkeneTechnologies/skene-skills",
-      "prefix": "skene"
-    }
-  ]
-}
-```
-
-Then use skills with the prefix:
+For a complete PLG analysis, run the skills in this order:
 
 ```
 /skene:analyze-tech-stack
 /skene:analyze-growth-hubs
+/skene:analyze-product-overview
+/skene:analyze-features
 /skene:generate-growth-manifest
+/skene:generate-growth-template
 ```
-
-Or install without a prefix to use skills directly:
-
-```json
-{
-  "agentSkills": [
-    {
-      "source": "github:SkeneTechnologies/skene-skills"
-    }
-  ]
-}
-```
-
-For more details on agent skills, see the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code/agent-skills).
-
-## Usage Flow
-
-For a complete PLG analysis:
-
-1. `/analyze-tech-stack` - Understand the technology
-2. `/analyze-growth-hubs` - Find existing growth features
-3. `/analyze-product-overview` - Document the product (optional)
-4. `/analyze-features` - Document features (optional)
-5. `/generate-growth-manifest` - Combine into a manifest
-6. `/generate-growth-template` - Get actionable strategies
 
 ## License
 
