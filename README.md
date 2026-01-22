@@ -4,10 +4,11 @@ A Claude Code plugin for PLG (Product-Led Growth) analysis. Analyze codebases to
 
 ## Installation
 
-In Claude Code, run:
+In Claude Code:
 
 ```
-/plugin install github:SkeneTechnologies/skene-skills
+/plugin marketplace add SkeneTechnologies/skene-marketplace
+/plugin install skene@skene
 ```
 
 See [Claude Code plugins documentation](https://code.claude.com/docs/en/discover-plugins) for more details.
