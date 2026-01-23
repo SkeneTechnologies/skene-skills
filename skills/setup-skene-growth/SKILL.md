@@ -53,26 +53,17 @@ If the user needs help getting an API key, guide them:
 Create the directory and config file at `~/.config/skene-growth/config.toml`:
 
 ```toml
-# API key for LLM provider (can also use SKENE_API_KEY env var)
+[llm]
+provider = "<selected-provider>"
 api_key = "<user-provided-api-key>"
 
-# LLM provider: "openai", "gemini", "anthropic", "lmstudio", or "ollama"
-provider = "<selected-provider>"
-
-# Model to use (provider-specific defaults apply if not set)
-# openai: gpt-4o-mini | gemini: gemini-2.0-flash | anthropic: claude-sonnet-4-20250514 | ollama: llama2
-# model = "gpt-4o-mini"
-
-# Default output directory
+[output]
 output_dir = "./skene-context"
-
-# Enable verbose output
 verbose = false
 ```
 
-Replace `<user-provided-api-key>` with the actual key and `<selected-provider>` with the chosen provider.
-
-For local providers (lmstudio, ollama), the api_key line can be omitted or left empty.
+ - Replace `<user-provided-api-key>` with the actual key and `<selected-provider>` with the chosen provider, leave the other fields unchanged. 
+ - For local providers (lmstudio, ollama), the api_key line can be omitted or left empty.
 
 ## Guidelines
 
@@ -81,4 +72,4 @@ For local providers (lmstudio, ollama), the api_key line can be omitted or left 
 - Confirm the provider choice before creating the config
 - Never log or display the full API key after the user provides it
 - Even if the user has API keys stored in environment variables, it is required to add the api_key field to the config file
-- Offer to test the configuration by analyzing the codebase with `uvx skene-growth analyze .` at the end
+- Offer to test the package by running `uvx skene-growth analyze .`
