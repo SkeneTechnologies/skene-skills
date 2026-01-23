@@ -12,13 +12,13 @@ To setup skene-growth:
    - OpenAI: https://platform.openai.com/api-keys
    - Gemini: https://aistudio.google.com/apikey
    - Anthropic: https://console.anthropic.com/settings/keys
-5. **Create config file**: Create `./.skene-growth.toml` with:
+5. **Create config file**: Create `~/.config/skene-growth/config.toml` with:
    ```toml
-   [llm]
+   # LLM settings
    provider = "<selected-provider>"
    api_key = "<user-provided-api-key>"
 
-   [output]
+   # Output settings
    output_dir = "./skene-context"
    verbose = false
    ```
