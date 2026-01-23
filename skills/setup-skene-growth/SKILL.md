@@ -80,4 +80,5 @@ For local providers (lmstudio, ollama), the api_key line can be omitted or left 
 - If the user already has a config file, ask if they want to update it or start fresh
 - Confirm the provider choice before creating the config
 - Never log or display the full API key after the user provides it
+- Even if the user has API keys stored in environment variables, it is required to add the api_key field to the config file
 - Offer to test the configuration by analyzing the codebase with `uvx skene-growth analyze .` at the end
